@@ -19,7 +19,7 @@
                         </div>
                         <div class="about_content-thumb-image">
                             <img src="{{ .image | absURL }}" alt="about-img"
-                                style='-webkit-mask: url({{"images/about/about-mask-svg.svg" | absURL}}); -webkit-mask-size: contain;'>
+                                style='-webkit-mask: url({{"images/about/about-mask-svg.svg" | absURL}}); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat;'>
                         </div>
                     </div>
                     <div class="about_content-inner">
@@ -44,8 +44,8 @@
                         </div>
                         <div>
                             <a class="btn btn-primary mr-3 btn-zoom"
-                                href="{{ .button1Target | absURL }}">{{ .button1Name }}</a>
-                            <a class="btn btn-outline-primary btn-zoom" href="{{ .button2Target | absURL }}">
+                                href="{{ .absURL }}/#portfolio">{{ .button1Name }}</a>
+                            <a class="btn btn-outline-primary btn-zoom" href="{{ .button2Target | absURL }}" target="_blank" rel="noopener noreferrer">
                                 {{ .button2Name }} </a>
                         </div>
                     </div>

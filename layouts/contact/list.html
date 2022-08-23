@@ -27,7 +27,7 @@
         <h3 class="breadCrumb__title">{{ .Title }}</h3>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
-            <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Domov</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ .Params.breadcrumb }}</li>
           </ol>
         </nav>
@@ -54,7 +54,7 @@
               <img src="{{ "images/contact/location.svg" | absURL }}" alt="location" />
             </div>
           </div>
-          <h4>Office Address</h4>
+          <h4>Adresa prevádzky</h4>
           <p>
             {{ $address.address }}
           </p>
@@ -74,7 +74,7 @@
               <img src="{{ "images/contact/phone.svg" | absURL }}" alt="phone" />
             </div>
           </div>
-          <h4>Phone & Email</h4>
+          <h4>Číslo a Email</h4>
           <p>{{ $address.phone }}<br>
             <a href="mailto:{{ $address.email }}">{{ $address.email }}</a>
           </p>
@@ -95,7 +95,7 @@
               <img src="{{ "images/contact/time.svg" | absURL }}" alt="time" />
             </div>
           </div>
-          <h4>Working Hours</h4>
+          <h4>Otváracie hodiny</h4>
           <p>
             {{ $address.openingHours }}
           </p>
@@ -105,6 +105,7 @@
   </div>
 </section>
 
+<!--
 <section class="contact-form">
   <div class="container">
     <div class="row">
@@ -172,19 +173,22 @@
               </div>
             </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
-          </form> -->
+          </form> 
 
 
 
         </div>
       </div>
+      
       <div class="col-lg-6">
         {{ $map := .Site.Params.map }}
         <div id="map" data-lat={{ $map.latitude }} data-long={{ $map.longitude }} data-pin={{ $map.pinImage | absURL }}>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+-->
 
 {{ end }}

@@ -31,8 +31,21 @@
             <span class="top-title pre-line">{{ .topTitle }}</span>
             {{ .content | markdownify }}
           </div>
-          <a type="button" class="btn btn-lg btn-primary btn-zoom"
-            href="{{ .buttonURL | absURL }}">{{ .buttonName }}</a>
+          
+          <ul class="unstyle-list">
+            <li class="d-inline-block">
+              <a href="https://www.facebook.com/Kosickacukrarnicka/" class="btn-zoom" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-facebook-official fa-4x"></i>
+              </a>
+            </li>
+
+            <li class="d-inline-block mx-4">
+              <a href="https://www.instagram.com/kosicka.cukrarnicka/" class="btn-zoom" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-instagram fa-4x"></i>
+              </a>
+            </li>
+          </ul>
+
         </div>
       </div>
       <div class="col-lg-6">
@@ -49,16 +62,9 @@
 
           {{ if .videoURL }}
           <div class="hero_figure-popup">
-            <div class="thumb">
-              <img src="{{ .videoThumb }}" alt="popup" />
+            <div style="position: relative; left: 8rem;">
+              <img src="{{ .videoThumb }}" alt="popup" style="width:50%;" />
             </div>
-
-            <a href="{{ .videoURL }}" type="button" class="popup-button text-center big">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24">
-                <path d="M17.961 10.264a2 2 0 010 3.473L2.992 22.29A2 2 0 010 20.554V3.446A2 2 0 012.992 1.71z"
-                  data-name="Polygon 4" />
-              </svg>
-            </a>
           </div>
           {{ end }}
         </div>
