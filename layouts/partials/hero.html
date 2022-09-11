@@ -34,14 +34,14 @@
           
           <ul class="unstyle-list">
             <li class="d-inline-block">
-              <a href="https://www.facebook.com/Kosickacukrarnicka/" class="btn-zoom" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=100057261587501" class="btn-zoom" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-facebook-official fa-4x"></i>
               </a>
             </li>
 
             <li class="d-inline-block mx-4">
-              <a href="https://www.instagram.com/kosicka.cukrarnicka/" class="btn-zoom" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-instagram fa-4x"></i>
+              <a href="https://menucka.sk/magazin/urban-cafe-kosice-kaviaren-s-vlastnym-zivotnym-pribehom/" class="btn-zoom" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-newspaper-o fa-4x" aria-hidden="true"></i>
               </a>
             </li>
           </ul>
@@ -54,17 +54,24 @@
             <img src="images/hero/figure-svg.svg" alt="figure-svg" />
           </div>
           <img src="{{ .image | absURL }}" alt="hero-image" style='
-                  -webkit-mask: url({{"images/hero/hero-mask-svg.png" | absURL }});
-                  -webkit-mask-repeat: no-repeat;
-                  -webkit-mask-size: contain;
-                  -webkit-mask-position: center center;
+                  mask: url({{"images/hero/hero-mask-svg.png" | absURL }});
+                  mask-repeat: no-repeat;
+                  mask-size: contain;
+                  mask-position: center center;
                 ' />
 
           {{ if .videoURL }}
           <div class="hero_figure-popup">
-            <div style="position: relative; left: 8rem;">
-              <img src="{{ .videoThumb }}" alt="popup" style="width:50%;" />
+            <div class="thumb">
+              <img src="{{ .videoThumb }}" alt="popup" />
             </div>
+
+            <a href="{{ .videoURL }}" type="button" class="popup-button text-center big">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24">
+                <path d="M17.961 10.264a2 2 0 010 3.473L2.992 22.29A2 2 0 010 20.554V3.446A2 2 0 012.992 1.71z"
+                  data-name="Polygon 4" />
+              </svg>
+            </a>
           </div>
           {{ end }}
         </div>
